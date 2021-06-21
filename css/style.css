@@ -97,7 +97,7 @@ main {
 .hero h2 {
     font-size: 6em;
     line-height: 1;
-    text-transform: uppercase;
+    text-transform: none;
     margin: 0 auto;
 }
 

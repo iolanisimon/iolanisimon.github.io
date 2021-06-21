@@ -1,3 +1,5 @@
-# iolanisimon.github.io
+# Chris's Student Site
 
-Hello. I am Simon, a student in the Summer Programs in Iolani.
+This is a coded static website created as part of an in-class exercise during my summer Web Design Studio class
+
+[View my Site](https://iolanichris.github.io/)

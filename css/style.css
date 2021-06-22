@@ -25,20 +25,40 @@ img {
     display: inline-block;
     padding: 1em 2em;
     text-decoration: none;
-    background-color: rgba(0, 102, 204, .8);
+    background-color: rgb(204, 139, 0);
     color: white;
     border-radius: 5px;
 }
 .button:hover {
-    background-color: rgba(0, 102, 204, 1);
+    background-color: rgb(196, 88, 0);
     color: white;
 }
 .button.dark {
+    color: white;
     color: rgba(0, 102, 204, 1);
-    background-color: rgba(255, 255, 255,.8);
+    background-color: rgb(255, 0, 0);
 }
 .button.dark:hover {
     background-color: rgba(255, 255, 255,1);
+}
+.button.trans1:hover {
+    transition:all 1s ease-in;
+}
+.button.trans2:hover {
+    transition:all 0.4s ease-in;
+}
+
+* {
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
 }
 
 /* SITE STRUCTURE */
@@ -95,7 +115,7 @@ main {
 }
 
 .hero h2 {
-    font-size: 6em;
+    font-size: 3em;
     line-height: 1;
     text-transform: none;
     margin: 0 auto;
@@ -172,7 +192,14 @@ aside {
         padding: .3em 2em 0 0;
     }
 }
-
+/* Home Page Hero */
+.page-home .hero {
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 /* SUB PAGES */
 .page-sub .hero {
     background-color:rgba(0, 0, 0, 0.1);
@@ -226,3 +253,25 @@ dd {
     border: 1px solid rgba(0,0,0,.1) !important;
     color: rgba(0,0,0,.5) !important;
 } */
+
+
+/* Page Fade In Animation */
+@keyframes fadeanddropIn {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0; 
+    }
+    100% {
+      transform: translateY(0px); 
+      opacity: 1; 
+    }
+  }
+  
+  .fadeanddropIn * {
+    animation: fadeanddropIn 2s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .fadeanddropIn *:nth-child(1) { animation-delay: .25s;}
+  .fadeanddropIn *:nth-child(2) { animation-delay: .5s;}
+  .fadeanddropIn *:nth-child(3) { animation-delay: 1s;}
